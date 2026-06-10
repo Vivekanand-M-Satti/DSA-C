@@ -18,7 +18,6 @@ int main()
     struct ssl *ptr;
     ptr=&head;
 
-    
     while(ptr!=NULL)
     {
         printf("%d\n",ptr->d);
