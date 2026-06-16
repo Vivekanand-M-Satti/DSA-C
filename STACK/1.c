@@ -23,6 +23,7 @@ struct stack
 };
 
 int main(){
+    
     struct stack s1;
     
 }
