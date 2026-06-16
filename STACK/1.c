@@ -22,8 +22,7 @@ struct stack
     int *arr;
 };
 
-int main()
-{
+int main(){
     struct stack s1;
     
 }
