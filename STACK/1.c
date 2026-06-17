@@ -1,29 +1,23 @@
-//stack by using the array;
-// #include<stdio.h>
-// int main()
-// {
-//     int strt=0,end=0;
-//     int size;
-//     int arr[1000];
-//     for(int i=0;i<1000;i++)
-//     {
-//         scanf("%d",&arr[i]);
-//         end++;
-//     }
-    
-
-// }
-
-#include<stdio.h>
-struct stack
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     struct ListNode *next;
+ * };
+ */
+struct ListNode* reverseList(struct ListNode* head) 
 {
-    int top;
-    int capacity;
-    int *arr;
-};
+    struct ListNode *prev = NULL;
+    struct ListNode *curr = head;
+    struct ListNode *next = NULL;
 
-int main(){
-    
-    struct stack s1;
-    
+    while (curr != NULL)
+    {
+        next = curr->next;  // Store next node
+        curr->next = prev;  // Reverse the link
+        prev = curr;        // Move prev forward
+        curr = next;        // Move curr forward
+    }
+
+    return prev;
 }
